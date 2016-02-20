@@ -22,7 +22,7 @@ app.use(express.static(__dirname + '/public'))
 });
 
 // 追加
-app.get('/api/project:id', function (req, res, next) {
+app.get('/api/project/:id', function (req, res, next) {
   var id = req.params.id;
   res.json(id);
 	return next();
